@@ -1,0 +1,128 @@
+{
+    "nav": {
+        "home": "בית",
+        "about": "אודות",
+        "contact": "יצירת קשר",
+        "contactMe": "צור קשר"
+    },
+    "home": {
+        "hero": {
+            "title": "עומר כהן: מפתח Full-Stack ופותר בעיות",
+            "subtitle": "בונה אפליקציות ווב חזקות עם דגש על חוויית משתמש וארכיטקטורה סקיילבילית. בואו נבנה משהו מעולה יחד.",
+            "cta": "צור קשר"
+        },
+        "expertise": {
+            "title": "תחומי מומחיות",
+            "items": [
+                {
+                    "title": "פיתוח ווב",
+                    "text": "בניית אפליקציות ווב רספונסיביות ומהירות בטכנולוגיות מודרניות."
+                },
+                {
+                    "title": "פיתוח Backend",
+                    "text": "תכנון והקמה של APIs, מסדי נתונים ולוגיקה צד שרת בצורה סקיילבילית."
+                },
+                {
+                    "title": "ניהול מסדי נתונים",
+                    "text": "ניסיון ב-SQL ו-NoSQL תוך שמירה על ביצועים ודיוק נתונים."
+                },
+                {
+                    "title": "ענן",
+                    "text": "פריסה וניהול אפליקציות על AWS, Azure ו-GCP."
+                },
+                {
+                    "title": "DevOps ו-Deployment",
+                    "text": "אוטומציה של CI/CD ותשתיות לצורך תהליכי העלאה יציבים."
+                },
+                {
+                    "title": "UI/UX Design",
+                    "text": "יצירת ממשקים ברורים ונוחים עם דגש על שימושיות."
+                },
+                {
+                    "title": "ניהול גרסאות",
+                    "text": "עבודה מקצועית עם Git ו-GitHub לפיתוח צוותי מסודר."
+                },
+                {
+                    "title": "ייעוץ טכנולוגי",
+                    "text": "ליווי מקצועי ובחירת פתרונות נכונים לאתגרים טכנולוגיים."
+                }
+            ]
+        },
+        "cta": {
+            "title": "מוכן להפוך רעיון למוצר?",
+            "button": "בואו נתחבר"
+        }
+    },
+    "about": {
+        "name": "עומר כהן",
+        "role": "מפתח Full-Stack בכיר",
+        "bio": "עם מעל 10 שנות ניסיון, עומר מתמחה בבניית אפליקציות ווב חזקות וסקיילביליות. הוא מצטיין בפתרון בעיות מורכבות ובהובלת פתרונות איכותיים וביצועיים מהרעיון ועד לפריסה. התשוקה שלו היא ליצור חוויות משתמש חלקות ולשפר מערכות Backend ליעילות מקסימלית.",
+        "expertiseTitle": "תחומי מומחיות",
+        "expertiseGroups": [
+            {
+                "title": "Frontend Development",
+                "tags": [
+                    "React",
+                    "Next.js",
+                    "TypeScript",
+                    "Tailwind CSS",
+                    "Redux",
+                    "Vue.js"
+                ]
+            },
+            {
+                "title": "Backend Development",
+                "tags": [
+                    "Node.js",
+                    "Express.js",
+                    "Python",
+                    "Django",
+                    "REST APIs",
+                    "GraphQL"
+                ]
+            },
+            {
+                "title": "Databases & ORMs",
+                "tags": ["PostgreSQL", "MongoDB", "MySQL", "Redis", "Prisma"]
+            },
+            {
+                "title": "Cloud & DevOps",
+                "tags": [
+                    "Git",
+                    "Docker",
+                    "AWS",
+                    "Vercel",
+                    "Kubernetes",
+                    "CI/CD"
+                ]
+            },
+            {
+                "title": "Tools & Methodologies",
+                "tags": ["Jira", "Figma", "Agile", "Scrum", "TDD"]
+            }
+        ],
+        "ctaTitle": "מוכן לשיתוף פעולה?",
+        "ctaButton": "צור קשר"
+    },
+    "contactPage": {
+        "title": "יצירת קשר",
+        "subtitle": "יש לך פרויקט או שאלה? אשמח לשמוע ממך.",
+        "formTitle": "שלח לי הודעה",
+        "name": "השם שלך",
+        "namePlaceholder": "ישראל ישראלי",
+        "email": "האימייל שלך",
+        "emailPlaceholder": "name@example.com",
+        "message": "ההודעה שלך",
+        "messagePlaceholder": "ספר לי על הפרויקט או השאלה שלך...",
+        "send": "שלח הודעה",
+        "findMe": "אפשר למצוא אותי גם כאן",
+        "emailValue": "1omercohen@gmail.com",
+        "note": "אפשר ליצור קשר גם ברשתות החברתיות לעדכונים, פרויקטים ותוכן מקצועי."
+    },
+    "footer": {
+        "rights": "© 2026 Omer Cohen. כל הזכויות שמורות.",
+        "builtWith": "נבנה עם תשוקה וטכנולוגיות ווב מודרניות.",
+        "quickLinks": "קישורים מהירים",
+        "connect": "אפשר ליצור איתי קשר"
+    }
+}

@@ -1,0 +1,128 @@
+{
+    "nav": {
+        "home": "Home",
+        "about": "About",
+        "contact": "Contact",
+        "contactMe": "Contact Me"
+    },
+    "home": {
+        "hero": {
+            "title": "Omer Cohen: Full-Stack Developer & Problem Solver",
+            "subtitle": "Crafting robust web applications with a focus on user experience and scalable architecture. Let's build something amazing together.",
+            "cta": "Contact Me"
+        },
+        "expertise": {
+            "title": "My Expertise",
+            "items": [
+                {
+                    "title": "Web Development",
+                    "text": "Building responsive and performant web applications using modern frameworks and technologies."
+                },
+                {
+                    "title": "Backend Development",
+                    "text": "Designing and implementing scalable APIs, databases, and server-side logic."
+                },
+                {
+                    "title": "Database Management",
+                    "text": "Expertise in SQL and NoSQL databases, ensuring data integrity and efficient querying."
+                },
+                {
+                    "title": "Cloud Computing",
+                    "text": "Deploying and managing applications on cloud platforms like AWS, Azure, and GCP."
+                },
+                {
+                    "title": "DevOps & Deployment",
+                    "text": "Automating CI/CD pipelines and infrastructure for seamless application delivery."
+                },
+                {
+                    "title": "UI/UX Design",
+                    "text": "Creating intuitive and engaging user interfaces with a focus on usability."
+                },
+                {
+                    "title": "Version Control",
+                    "text": "Proficient in Git and GitHub for collaborative development and code management."
+                },
+                {
+                    "title": "Technical Consulting",
+                    "text": "Providing expert guidance and solutions for complex software challenges."
+                }
+            ]
+        },
+        "cta": {
+            "title": "Ready to bring your ideas to life?",
+            "button": "Let's Connect"
+        }
+    },
+    "about": {
+        "name": "Omer Cohen",
+        "role": "Senior Full-Stack Developer",
+        "bio": "With over 10 years of experience, Omer specializes in building robust and scalable web applications. He thrives on solving complex problems and delivering high-quality, performant solutions from concept to deployment. His passion lies in creating seamless user experiences and optimizing backend systems for efficiency.",
+        "expertiseTitle": "My Expertise",
+        "expertiseGroups": [
+            {
+                "title": "Frontend Development",
+                "tags": [
+                    "React",
+                    "Next.js",
+                    "TypeScript",
+                    "Tailwind CSS",
+                    "Redux",
+                    "Vue.js"
+                ]
+            },
+            {
+                "title": "Backend Development",
+                "tags": [
+                    "Node.js",
+                    "Express.js",
+                    "Python",
+                    "Django",
+                    "REST APIs",
+                    "GraphQL"
+                ]
+            },
+            {
+                "title": "Databases & ORMs",
+                "tags": ["PostgreSQL", "MongoDB", "MySQL", "Redis", "Prisma"]
+            },
+            {
+                "title": "Cloud & DevOps",
+                "tags": [
+                    "Git",
+                    "Docker",
+                    "AWS",
+                    "Vercel",
+                    "Kubernetes",
+                    "CI/CD"
+                ]
+            },
+            {
+                "title": "Tools & Methodologies",
+                "tags": ["Jira", "Figma", "Agile", "Scrum", "TDD"]
+            }
+        ],
+        "ctaTitle": "Ready to Collaborate?",
+        "ctaButton": "Contact Me"
+    },
+    "contactPage": {
+        "title": "Get in Touch",
+        "subtitle": "Have a project or question? I'd love to hear from you.",
+        "formTitle": "Send Me a Message",
+        "name": "Your Name",
+        "namePlaceholder": "John Doe",
+        "email": "Your Email",
+        "emailPlaceholder": "john.doe@example.com",
+        "message": "Your Message",
+        "messagePlaceholder": "Tell me about your project or question...",
+        "send": "Send Message",
+        "findMe": "Find Me Online",
+        "emailValue": "1omercohen@gmail.com",
+        "note": "Connect with me on social media to see my latest updates, projects, and thoughts on web development."
+    },
+    "footer": {
+        "rights": "© 2026 Omer Cohen. All rights reserved.",
+        "builtWith": "Built with passion and modern web technologies.",
+        "quickLinks": "Quick Links",
+        "connect": "Connect With Me"
+    }
+}

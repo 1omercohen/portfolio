@@ -24,7 +24,15 @@ export default function App() {
     return (
         <ThemeProvider theme={theme}>
             <CssBaseline />
-            <Box sx={{ minHeight: "100vh", bgcolor: "background.default" }}>
+            <Box
+                sx={{
+                    minHeight: "100vh",
+                    bgcolor: "background.default",
+                    width: "100%",
+                    maxWidth: "100%",
+                    overflowX: "hidden",
+                }}
+            >
                 <Header />
                 <Routes>
                     <Route path="/" element={<HomePage />} />

@@ -19,7 +19,7 @@ export default function AboutPage() {
     return (
         <>
             <Box sx={{ py: { xs: 5, md: 8 } }}>
-                <Container maxWidth="xl">
+                <Container maxWidth="xl" sx={{ px: { xs: 2, sm: 3 } }}>
                     <Grid container spacing={3} alignItems="center">
                         <Grid item xs={12} md={3}>
                             <Box
@@ -46,7 +46,12 @@ export default function AboutPage() {
                         <Grid item xs={12} md={9}>
                             <Typography
                                 variant="h1"
-                                sx={{ fontSize: { xs: "2.2rem", md: "4rem" } }}
+                                sx={{
+                                    fontSize: { xs: "2.1rem", sm: "2.6rem", md: "4rem" },
+                                    lineHeight: 1.2,
+                                    overflowWrap: "anywhere",
+                                    wordBreak: "break-word",
+                                }}
                             >
                                 {t("about.name")}
                             </Typography>
@@ -55,7 +60,9 @@ export default function AboutPage() {
                                 sx={{
                                     fontWeight: 700,
                                     mt: 1,
-                                    fontSize: { xs: 22, md: 34 },
+                                    fontSize: { xs: "1.95rem", sm: "2.2rem", md: "2.125rem" },
+                                    overflowWrap: "anywhere",
+                                    wordBreak: "break-word",
                                 }}
                             >
                                 {t("about.role")}
@@ -65,7 +72,10 @@ export default function AboutPage() {
                                 sx={{
                                     mt: 2,
                                     maxWidth: 1000,
-                                    fontSize: { xs: 18, md: 28 },
+                                    fontSize: { xs: "1.15rem", sm: "1.25rem", md: "1.75rem" },
+                                    lineHeight: 1.5,
+                                    overflowWrap: "anywhere",
+                                    wordBreak: "break-word",
                                 }}
                             >
                                 {t("about.bio")}
@@ -76,10 +86,15 @@ export default function AboutPage() {
             </Box>
 
             <Box sx={{ py: { xs: 6, md: 10 }, bgcolor: "#1d222d" }}>
-                <Container maxWidth="lg">
+                <Container maxWidth="lg" sx={{ px: { xs: 2, sm: 3 } }}>
                     <Typography
                         variant="h2"
-                        sx={{ textAlign: "center", mb: 5 }}
+                        sx={{
+                            textAlign: "center",
+                            mb: { xs: 3.5, md: 5 },
+                            fontSize: { xs: "3rem", sm: "3.5rem", md: "3.75rem" },
+                            lineHeight: 1.1,
+                        }}
                     >
                         {t("about.expertiseTitle")}
                     </Typography>
@@ -96,7 +111,7 @@ export default function AboutPage() {
                                     <CardContent>
                                         <Typography
                                             fontWeight={700}
-                                            sx={{ mb: 1.2 }}
+                                            sx={{ mb: 1.2, fontSize: { xs: "1.05rem", md: "1.25rem" } }}
                                         >
                                             {group.title}
                                         </Typography>
@@ -130,9 +145,16 @@ export default function AboutPage() {
             </Box>
 
             <Box sx={{ py: 7, bgcolor: "#11161d" }}>
-                <Container maxWidth="md">
+                <Container maxWidth="md" sx={{ px: { xs: 2, sm: 3 } }}>
                     <Stack spacing={2} alignItems="center">
-                        <Typography variant="h2">
+                        <Typography
+                            variant="h2"
+                            sx={{
+                                fontSize: { xs: "2.6rem", sm: "3rem", md: "3.75rem" },
+                                lineHeight: 1.1,
+                                textAlign: "center",
+                            }}
+                        >
                             {t("about.ctaTitle")}
                         </Typography>
                         <Button

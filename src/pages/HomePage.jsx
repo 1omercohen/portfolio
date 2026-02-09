@@ -20,13 +20,17 @@ export default function HomePage() {
         <>
             <Box sx={{ bgcolor: "#082d58", py: { xs: 5, md: 10 } }}>
                 <Container maxWidth="xl">
-                    <Grid container spacing={5} alignItems="center">
+                    <Grid container spacing={{ xs: 0, sm: 2, md: 5 }} alignItems="center">
                         <Grid item xs={12} md={6}>
                             <Typography
                                 variant="h1"
                                 sx={{
-                                    fontSize: { xs: "2.2rem", md: "4rem" },
+                                    fontSize: { xs: "1.9rem", sm: "2.2rem", md: "4rem" },
                                     maxWidth: 620,
+                                    lineHeight: 1.2,
+                                    overflowWrap: "anywhere",
+                                    wordBreak: "break-word",
+                                    textAlign: { xs: "center", md: "start" },
                                 }}
                             >
                                 {t("home.hero.title")}
@@ -36,27 +40,30 @@ export default function HomePage() {
                                     mt: 2,
                                     color: "#d7e6ff",
                                     maxWidth: 540,
-                                    fontSize: { xs: 20, md: 26 },
+                                    fontSize: { xs: 18, md: 26 },
+                                    textAlign: { xs: "center", md: "start" },
                                 }}
                             >
                                 {t("home.hero.subtitle")}
                             </Typography>
-                            <Button
-                                variant="contained"
-                                size="large"
-                                component={RouterLink}
-                                to="/contact"
-                                sx={{ mt: 3 }}
-                            >
-                                {t("home.hero.cta")}
-                            </Button>
+                            <Box sx={{ display: "flex", justifyContent: { xs: "center", md: "flex-start" } }}>
+                                <Button
+                                    variant="contained"
+                                    size="large"
+                                    component={RouterLink}
+                                    to="/contact"
+                                    sx={{ mt: 3 }}
+                                >
+                                    {t("home.hero.cta")}
+                                </Button>
+                            </Box>
                         </Grid>
                         <Grid item xs={12} md={6}>
                             <Box
                                 sx={{
                                     borderRadius: 2,
                                     border: "1px solid #315b88",
-                                    height: { xs: 300, md: 430 },
+                                    height: { xs: 260, sm: 320, md: 430 },
                                     overflow: "hidden",
                                     bgcolor: "#0f1726",
                                 }}

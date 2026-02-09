@@ -16,6 +16,8 @@ concurrency:
 
 jobs:
   build:
+    environment:
+      name: github-pages
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -31,6 +33,10 @@ jobs:
         run: npm ci
 
       - name: Build site
+        env:
+          VITE_EMAILJS_SERVICE_ID: ${{ secrets.EMAILJS_SERVICE }}
+          VITE_EMAILJS_TEMPLATE_ID: ${{ secrets.EMAILJS_TEMPLATE }}
+          VITE_EMAILJS_PUBLIC_KEY: ${{ secrets.EMAILJS_KEY }}
         run: npm run build
 
       - name: Setup Pages

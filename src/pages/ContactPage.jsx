@@ -1,4 +1,6 @@
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import emailjs from "@emailjs/browser";
 import {
     Box,
     Button,
@@ -17,6 +19,62 @@ import { GITHUB_URL, LINKEDIN_URL } from "../constants/links";
 
 export default function ContactPage() {
     const { t } = useTranslation();
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        message: "",
+    });
+    const [sending, setSending] = useState(false);
+    const [status, setStatus] = useState({ type: "", text: "" });
+
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+    const handleChange = (field) => (event) => {
+        setFormData((prev) => ({ ...prev, [field]: event.target.value }));
+    };
+
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        setStatus({ type: "", text: "" });
+
+        if (!formData.name || !formData.email || !formData.message) {
+            setStatus({ type: "error", text: "Please fill all fields." });
+            return;
+        }
+
+        if (!serviceId || !templateId || !publicKey) {
+            setStatus({
+                type: "error",
+                text: "Email service is not configured. Missing VITE_EMAILJS_* variables.",
+            });
+            return;
+        }
+
+        try {
+            setSending(true);
+            await emailjs.send(
+                serviceId,
+                templateId,
+                {
+                    from_name: formData.name,
+                    from_email: formData.email,
+                    message: formData.message,
+                },
+                { publicKey },
+            );
+            setStatus({ type: "success", text: "Message sent successfully." });
+            setFormData({ name: "", email: "", message: "" });
+        } catch (error) {
+            setStatus({
+                type: "error",
+                text: "Failed to send message. Please try again.",
+            });
+        } finally {
+            setSending(false);
+        }
+    };
 
     return (
         <Box sx={{ py: { xs: 6, md: 9 } }}>
@@ -56,15 +114,24 @@ export default function ContactPage() {
                         >
                             {t("contactPage.formTitle")}
                         </Typography>
-                        <Stack spacing={2}>
+                        <Stack
+                            component="form"
+                            spacing={2}
+                            onSubmit={handleSubmit}
+                        >
                             <TextField
                                 label={t("contactPage.name")}
                                 placeholder={t("contactPage.namePlaceholder")}
+                                value={formData.name}
+                                onChange={handleChange("name")}
                                 fullWidth
                             />
                             <TextField
                                 label={t("contactPage.email")}
                                 placeholder={t("contactPage.emailPlaceholder")}
+                                value={formData.email}
+                                onChange={handleChange("email")}
+                                type="email"
                                 fullWidth
                             />
                             <TextField
@@ -72,13 +139,32 @@ export default function ContactPage() {
                                 placeholder={t(
                                     "contactPage.messagePlaceholder",
                                 )}
+                                value={formData.message}
+                                onChange={handleChange("message")}
                                 multiline
                                 minRows={5}
                                 fullWidth
                             />
-                            {/* <Button variant="contained" size="large">
+                            <Button
+                                variant="contained"
+                                size="large"
+                                type="submit"
+                                disabled={sending}
+                            >
                                 {t("contactPage.send")}
-                            </Button> */}
+                            </Button>
+                            {status.text ? (
+                                <Typography
+                                    color={
+                                        status.type === "error"
+                                            ? "error.main"
+                                            : "success.main"
+                                    }
+                                    sx={{ textAlign: "center" }}
+                                >
+                                    {status.text}
+                                </Typography>
+                            ) : null}
                         </Stack>
                     </CardContent>
                 </Card>

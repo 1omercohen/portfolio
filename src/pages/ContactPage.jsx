@@ -59,8 +59,13 @@ export default function ContactPage() {
                 templateId,
                 {
                     from_name: formData.name,
+                    name: formData.name,
+                    user_name: formData.name,
                     from_email: formData.email,
+                    email: formData.email,
+                    reply_to: formData.email,
                     message: formData.message,
+                    subject: "New message from portfolio contact form",
                 },
                 { publicKey },
             );

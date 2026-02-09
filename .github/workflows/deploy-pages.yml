@@ -32,6 +32,16 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Validate EmailJS env vars
+        env:
+          VITE_EMAILJS_SERVICE_ID: ${{ secrets.EMAILJS_SERVICE }}
+          VITE_EMAILJS_TEMPLATE_ID: ${{ secrets.EMAILJS_TEMPLATE }}
+          VITE_EMAILJS_PUBLIC_KEY: ${{ secrets.EMAILJS_KEY }}
+        run: |
+          [ -n "$VITE_EMAILJS_SERVICE_ID" ] || (echo "Missing EMAILJS_SERVICE secret" && exit 1)
+          [ -n "$VITE_EMAILJS_TEMPLATE_ID" ] || (echo "Missing EMAILJS_TEMPLATE secret" && exit 1)
+          [ -n "$VITE_EMAILJS_PUBLIC_KEY" ] || (echo "Missing EMAILJS_KEY secret" && exit 1)
+
       - name: Build site
         env:
           VITE_EMAILJS_SERVICE_ID: ${{ secrets.EMAILJS_SERVICE }}
